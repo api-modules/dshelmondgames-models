@@ -9,6 +9,9 @@ class AnimalApi extends BotModelBase
 {
     protected $hidden = [
         'api',
+        'created_at',
+        'updated_at',
+        'deleted_at',
     ];
 
     public static function targetLlama(): Builder
