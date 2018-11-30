@@ -2,9 +2,10 @@
 
 namespace App\Models\Bot;
 
+use App\Models\BotModelBase;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class GuildSetting
+class GuildSetting extends BotModelBase
 {
     use SoftDeletes;
 
