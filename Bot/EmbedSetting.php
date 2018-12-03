@@ -10,4 +10,10 @@ class EmbedSetting extends BotModelBase
     use SoftDeletes;
 
     protected $table = 'embedSettings';
+    protected $primaryKey = 'guild_id';
+
+    protected $casts = [
+        'guild_id' => 'String',
+        'embed_color' => 'Integer',
+    ];
 }

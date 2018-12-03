@@ -10,4 +10,10 @@ class OneGuildPatron extends BotModelBase
     use SoftDeletes;
 
     protected $table = 'oneGuildPatrons';
+    protected $primaryKey = 'user_id';
+
+    protected $casts = [
+        'user_id' => 'String',
+        'guild_id' => 'String',
+    ];
 }
