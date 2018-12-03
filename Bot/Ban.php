@@ -7,4 +7,9 @@ use App\Models\BotModelBase;
 class Ban extends BotModelBase
 {
 
+    protected $dates = [
+        'ban_date',
+        'unban_date',
+    ];
+
 }
