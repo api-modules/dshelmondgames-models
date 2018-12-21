@@ -7,4 +7,8 @@ use App\Models\BotModelBase;
 class Pronoun extends BotModelBase
 {
     protected $primaryKey = 'user_id';
+
+    protected $casts = [
+        'singular' => 'boolean',
+    ];
 }
