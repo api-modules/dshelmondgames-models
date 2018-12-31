@@ -10,4 +10,8 @@ class CustomCommand extends BotModelBase
     use SoftDeletes;
 
     protected $table = 'customCommands';
+
+    protected $casts = [
+        'autoresponse' => 'boolean'
+    ];
 }
