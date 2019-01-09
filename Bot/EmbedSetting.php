@@ -17,7 +17,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  *   property="guild_id",
  *   type="string",
  *   description="The uniqe id of this item that also holds the id of the target guild",
- *   example="1"
+ *   example="191245668617158656"
  * ),
  * @OA\Property(
  *   property="embed_color",

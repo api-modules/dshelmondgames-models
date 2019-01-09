@@ -23,7 +23,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  *   property="guildId",
  *   type="string",
  *   description="The id of the guild that this setting is for",
- *   example="1"
+ *   example="191245668617158656"
  * ),
  * @OA\Property(
  *   property="prefix",

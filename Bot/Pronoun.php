@@ -16,7 +16,7 @@ use App\Models\BotModelBase;
  *   property="user_id",
  *   type="string",
  *   description="The id of the user that this pronoun is for",
- *   example="1"
+ *   example="191231307290771456"
  * ),
  * @OA\Property(
  *   property="pronouns",
