@@ -4,6 +4,14 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
+/**
+ * Class BotModelBase
+ *
+ * @package App\Models
+ *
+ * @mixin \Illuminate\Database\Query\Builder
+ * @mixin \Illuminate\Database\Eloquent\Builder
+ */
 class BotModelBase extends Model
 {
     protected $connection = 'mysql_bot';
