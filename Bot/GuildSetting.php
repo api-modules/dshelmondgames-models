@@ -124,7 +124,5 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  */
 class GuildSetting extends BotModelBase
 {
-    use SoftDeletes;
-
     protected $table = 'guildSettings';
 }
