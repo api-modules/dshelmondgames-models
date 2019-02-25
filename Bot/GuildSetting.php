@@ -3,6 +3,7 @@
 namespace App\Models\Bot;
 
 use App\Models\BotModelBase;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
 /**
@@ -121,8 +122,19 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  *   description="The ratelimits for the spam duration",
  *   example="0|0|0|0|0"
  * ),
+ * @OA\Property(
+ *   property="blacklisted_words",
+ *   type="string[]",
+ *   description="The array that contains the blaclisted words",
+ *   example="['hello', 'world']"
+ * ),
  */
 class GuildSetting extends BotModelBase
 {
     protected $table = 'guildSettings';
+
+    public function blacklistedWords(): HasMany
+    {
+        return $this->hasMany(GuildBlacklist::class, 'guild_id', 'guildId');
+    }
 }
