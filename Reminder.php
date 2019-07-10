@@ -1,9 +1,6 @@
 <?php
 
 namespace App\Models;
-
-use Illuminate\Database\Eloquent\Model;
-
 /**
  * Class Reminder
  *
@@ -16,7 +13,7 @@ use Illuminate\Database\Eloquent\Model;
  * @property \Illuminate\Support\Carbon remind_date
  *
  */
-class Reminder extends Model
+class Reminder extends BotModelBase
 {
 
 }
