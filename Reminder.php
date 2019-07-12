@@ -51,5 +51,10 @@ namespace App\Models;
  */
 class Reminder extends BotModelBase
 {
-
+    protected $dates = [
+        'remind_date',
+        'remind_create_date',
+        'created_at',
+        'updated_at',
+    ];
 }
