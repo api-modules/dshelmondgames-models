@@ -32,7 +32,7 @@ namespace App\Models;
  *   property="type",
  *   type="string",
  *   description="The type of the patron",
- *   enum="[NORMAL, TAG, ONE_GUILD, ALL_GUILD]",
+ *   enum={"NORMAL", "TAG", "ONE_GUILD", "ALL_GUILD"},
  *   example="TAG"
  * ),
  */
