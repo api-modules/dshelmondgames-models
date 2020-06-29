@@ -2,6 +2,7 @@
 
 namespace App\Models\Bot;
 
+use App\Models\BotModelBase;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 /**
@@ -9,9 +10,10 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
  *
  * @package App\Models\Bot
  *
- * @property string                user_id
- * @property string                guild_id
- * @property \App\Enums\PatronType type
+ * @property string                    guild_id
+ * @property integer                   duration
+ * @property integer                   threshold
+ * @property \App\Enums\WarnActionType type
  *
  * @OA\Schema(
  *   type="object",

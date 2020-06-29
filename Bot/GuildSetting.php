@@ -9,27 +9,28 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 /**
  * Class GuildSetting.
  *
- * @property integer    id
- * @property string     guildId
- * @property string     prefix
- * @property boolean    autorole
- * @property boolean    enableJoinMessage
- * @property boolean    enableSwearFilter
- * @property boolean    autoDehoist
- * @property boolean    filterInvites
- * @property boolean    announceNextTrack
- * @property string     customWelcomeMessage
- * @property string     customLeaveMessage
- * @property string     serverDesc
- * @property string     logChannelId
- * @property string     welcomeLeaveChannel
- * @property boolean    spamFilterState
- * @property boolean    kickInsteadState
- * @property string     muteRoleId
- * @property string     ratelimits
- * @property Collection blacklistedWords
- * @property integer    spam_threshold
- * @property integer    leave_timeout
+ * @property integer          id
+ * @property string           guildId
+ * @property string           prefix
+ * @property boolean          autorole
+ * @property boolean          enableJoinMessage
+ * @property boolean          enableSwearFilter
+ * @property boolean          autoDehoist
+ * @property boolean          filterInvites
+ * @property boolean          announceNextTrack
+ * @property string           customWelcomeMessage
+ * @property string           customLeaveMessage
+ * @property string           serverDesc
+ * @property string           logChannelId
+ * @property string           welcomeLeaveChannel
+ * @property boolean          spamFilterState
+ * @property boolean          kickInsteadState
+ * @property string           muteRoleId
+ * @property string           ratelimits
+ * @property integer          spam_threshold
+ * @property integer          leave_timeout
+ * @property GuildBlacklist[] blacklistedWords
+ * @property WarnAction[]     warnActions
  *
  * @OA\Schema(
  *   type="object",
@@ -172,7 +173,12 @@ class GuildSetting extends BotModelBase
         return $this->hasMany(GuildBlacklist::class, 'guild_id', 'guildId');
     }
 
-    public function getRouteKeyName(): String
+    public function warnActions(): HasMany
+    {
+        return $this->hasMany(WarnAction::class, 'guild_id', 'guildId');
+    }
+
+    public function getRouteKeyName(): string
     {
         return 'guildId';
     }

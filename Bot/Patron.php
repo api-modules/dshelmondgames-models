@@ -2,6 +2,8 @@
 
 namespace App\Models\Bot;
 
+use App\Models\BotModelBase;
+
 /**
  * Class Patron
  *
