@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Models;
+namespace App\Models\Bot;
 
 /**
  * Class Patron
  *
- * @package App\Models
+ * @package App\Models\Bot
  *
  * @property string                user_id
  * @property string                guild_id

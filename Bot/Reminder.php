@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Models;
+namespace App\Models\Bot;
 /**
  * Class Reminder
  *
- * @package App\Models
+ * @package App\Models\Bot
  *
  * @property string                     user_id
  * @property string                     channel_id

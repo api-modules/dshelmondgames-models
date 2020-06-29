@@ -1,0 +1,23 @@
+{
+  "name": "duncte123/dshelmondgames-models",
+  "description": "Shared models for database access",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Duncan Sterken",
+      "email": "contact@duncte123.me"
+    }
+  ],
+  "require": {
+    "php": "^7.2.5"
+  },
+  "autoload": {
+    "psr-4": {
+      "App\\Models\\": ""
+    }
+  },
+  "config": {
+    "sort-packages": true
+  },
+  "minimum-stability": "dev"
+}
