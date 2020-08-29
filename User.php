@@ -22,14 +22,18 @@ class User extends Model implements AuthenticatableContract, AuthorizableContrac
 {
     use Authenticatable, Authorizable, SoftDeletes;
 
-    /**
+    protected $guarded = [
+        'id',
+    ];
+
+    /*
      * The attributes that are mass assignable.
      *
      * @var array
      */
-    protected $fillable = [
+    /*protected $fillable = [
         'name', 'email',
-    ];
+    ];*/
 
     /**
      * The attributes excluded from the model's JSON form.
