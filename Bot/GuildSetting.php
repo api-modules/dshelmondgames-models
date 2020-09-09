@@ -5,6 +5,7 @@ namespace App\Models\Bot;
 use App\Models\BotModelBase;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\HasOne;
 
 /**
  * Class GuildSetting.
@@ -176,6 +177,11 @@ class GuildSetting extends BotModelBase
     public function warnActions(): HasMany
     {
         return $this->hasMany(WarnAction::class, 'guild_id', 'guildId');
+    }
+
+    public function embedSetting(): HasOne
+    {
+        return $this->hasOne(EmbedSetting::class, 'guild_id', 'guildId');
     }
 
     public function getRouteKeyName(): string
