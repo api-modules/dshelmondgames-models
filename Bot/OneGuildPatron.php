@@ -37,7 +37,7 @@ class OneGuildPatron extends BotModelBase
     protected $primaryKey = 'user_id';
 
     protected $casts = [
-        'user_id' => 'String',
-        'guild_id' => 'String',
+        'user_id' => 'string',
+        'guild_id' => 'string',
     ];
 }
