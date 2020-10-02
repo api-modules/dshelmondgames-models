@@ -37,7 +37,7 @@ class EmbedSetting extends BotModelBase
     protected $primaryKey = 'guild_id';
 
     protected $casts = [
-        'guild_id' => 'String',
-        'embed_color' => 'Integer',
+        'guild_id' => 'string',
+        'embed_color' => 'integer',
     ];
 }
