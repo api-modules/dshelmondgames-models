@@ -32,6 +32,18 @@ use App\Models\BotModelBase;
  *   example="191245668617158657"
  * ),
  * @OA\Property(
+ *   property="message_id",
+ *   type="string",
+ *   description="The id of the message that was typed to create this reminder",
+ *   example="191245668617158657"
+ * ),
+ * @OA\Property(
+ *   property="in_channel",
+ *   type="boolean",
+ *   description="Set to true if we want to remind in the channel instead of in the user's dms",
+ *   example=false
+ * ),
+ * @OA\Property(
  *   property="reminder",
  *   type="string",
  *   description="The actual reminder",
