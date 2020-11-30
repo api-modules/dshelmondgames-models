@@ -38,6 +38,12 @@ use App\Models\BotModelBase;
  *   example="191245668617158657"
  * ),
  * @OA\Property(
+ *   property="message_id",
+ *   type="string",
+ *   description="The id of the guild that this reminder was created in",
+ *   example="191245668617158657"
+ * ),
+ * @OA\Property(
  *   property="in_channel",
  *   type="boolean",
  *   description="Set to true if we want to remind in the channel instead of in the user's dms",
